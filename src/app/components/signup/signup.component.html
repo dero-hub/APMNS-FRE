@@ -1,0 +1,132 @@
+<div id="login" class="container-fluid main_container text-white d-flex">
+    <div class="row flex-fill h-100">
+      <div class="col-sm-6">
+        <img
+          src="../../../assets/logo1.jpeg"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </div>
+  
+      <div class="col-sm-6 h-100" style="background: white">
+        <div style="padding-top: 2.5%"></div>
+        <div class="submit-form" style="padding-top: 5.5%">
+          <div
+            class="card-header"
+            style="
+              background: white;
+              color: #0f1eeb;
+              text-align: center;
+              font-size: 45px;
+              font-family: 'PT Mono', monospace;
+            "
+          >
+           <strong>SignUp</strong> 
+          </div>
+  
+         
+              <div *ngIf="!submitted">
+                <form>
+                  <div class="form-floating">
+                    <label for="firstname" style="color: #303ac7"
+                      >Firstname</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control form-rounded"
+                      id="firstname"
+                      required
+                      [(ngModel)]="register.firstname"
+                      name="firstname"
+                    />
+                  </div>
+                  <div class="form-floating">
+                    <label for="lastname" style="color: #303ac7"
+                      >Lastname:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control form-rounded"
+                      id="lastname"
+                      required
+                      [(ngModel)]="register.lastname"
+                      name="lastname"
+                    />
+                  </div>
+                    
+  
+                  <div class="form-floating">
+                    <label for="email" style="color:#303ac7"
+                      >email</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control form-rounded"
+                      id="email"
+                      required
+                      [(ngModel)]="register.email"
+                      name="email"
+                    />
+                  </div>
+  
+                  <div class="form-floating">
+                    <label for="dob" style="color:#303ac7"
+                      >phone</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control form-rounded"
+                      id="phone"
+                      required
+                      [(ngModel)]="register.phone"
+                      name="phone"
+                    />
+                  </div>
+  
+                  <div class="form-floating">
+                    <label for="password" style="color: #303ac7"
+                      >password</label
+                    >
+                    <input
+                      placeholder=""
+                      type="password"
+                      class="form-control form-rounded"
+                      id="password"
+                      required
+                      [(ngModel)]="register.password"
+                      name="password"
+                    />
+                  </div>
+  
+                  <button
+                    type="submit"
+                    (click)="saveUser()"
+                    class="btn btn-danger"
+                  >
+                    SignUp
+                  </button>
+                </form>
+              </div>
+  
+              <!-- <div *ngIf="submitted">
+                <div class="alert alert-success" role="alert">
+                  You've successfully created an Account!
+                </div>
+                <button class="btn btn-success" (click)="login()">Login</button>
+                <!--              <button class="btn btn-success" (click)="newUser()">Register</button>-->
+              <!-- </div> --> -->
+              <div
+                style="
+                  color: #0f1eeb;
+                  cursor: pointer;
+                  padding-top: 1%;
+                  text-align: left;
+                "
+              >
+                Already have an account? click here to login
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  
