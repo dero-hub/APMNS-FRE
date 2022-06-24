@@ -12,7 +12,7 @@ export class UserService {
 
   async signup(data: any) {
 
-    axios.post('http://localhost:4000/api/v1/users/create', data)
+    axios.post('http://localhost:4000/api/v1/auth/users/create', data)
       .then(function (response) {
         // handle success
         console.log(response.data);

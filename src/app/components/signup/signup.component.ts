@@ -36,7 +36,7 @@ export class SignupComponent implements OnInit {
       }
       console.log(userDetails);
       this.http.signup(userDetails);
-      this.submitted = true;
+      this.submitted = true
       
     };
 
