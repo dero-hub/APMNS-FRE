@@ -1,73 +1,109 @@
-<!-- <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+<nav class="navbar navbar-expand-sm navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="javascript:void(0)">APMNS</a>
+        <a class="navbar-brand" id="logo" href="javascript:void(0)">APMNS</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mynavbar">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)">About</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="text" placeholder="Search">
-                <button class="btn btn-primary" type="button">Search</button>
-            </form>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><button class="btn btn-info" data-bs-toggle="modal"
+                            data-bs-target="#myModal">Get Started</button></li>
+                </ul>
+                <li class="nav-item"><button class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#myModal">Login</button></li>
+            </div>
+
         </div>
     </div>
 </nav>
 
-<div class="container-fluid">
-    <div class="row" style="background-color: blue;">
+<div class="contaier-fluid" id="yoh">
+    <div class="row">
         <div class="col-md-6">
-            <div class="card bg-primary">
-                <div class="card-header">Header</div>
-                <div class="card-body">Content</div>
-                <div class="card-footer">Footer</div>
+            <div class="card">
+                <img class="card-img-top" src="../../../assets/t3.jpg" alt="Image">
+                <div class="card-body">
+                    <h4 class="card-title">Manage Your Events Well</h4>
+                    <p class="card-text">All you need to do is show up at the right time</p>
+                    <button class="btn btn-info" id="getstarted">GET STARTED!</button>
+                </div>
             </div>
+        </div>
+        <div class=" col-md-6" id="yoho">
+            <img src="../../../assets/t7.jpg" class="imgg" alt="">
+            <h1>Online scheduler for offering the best consultations</h1><br>
+            <p>APM Bookings syncs your calendars while letting customers self-schedule and pay for appointments. Our
+                user interface auto-customizes for your industry, meaning you feel right at home. Say hello to smart
+                scheduling!</p>
         </div>
     </div>
 </div>
 
-<header class="masthead">
-    <div class="container">
-        <div class="masthead-subheading">Welcome To Our Studio!</div>
-        <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-        <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
-    </div>
-</header> -->
 
-<div id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="#page-top"><img src="../../../assets/logo1.jpeg" alt="..." /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars ms-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+
+
+
+<div  class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header justify-content-center ">
+                <h3 class="modal-title" style="color: rgb(59, 215, 243);">Sign Up</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
+
+            <!-- Modal body -->
+            <div *ngIf="!submitted" class="modal-body">
+                <form>
+                    <div class="form-floating">
+                        <label for="firstname" style="color: rgb(143, 218, 218)">Firstname</label>
+                        <input type="text" class="form-control form-rounded" id="firstname" required
+                            [(ngModel)]="register.firstname" name="firstname" />
+                    </div>
+                    <div class="form-floating">
+                        <label for="lastname" style="color: rgb(143, 218, 218)">Lastname</label>
+                        <input type="text" class="form-control form-rounded" id="lastname" required
+                            [(ngModel)]="register.lastname" name="lastname" />
+                    </div>
+
+
+                    <div class="form-floating">
+                        <label for="email" style="color:rgb(143, 218, 218)">email</label>
+                        <input type="text" class="form-control form-rounded" id="email" required
+                            [(ngModel)]="register.email" name="email" />
+                    </div>
+
+                    <div class="form-floating">
+                        <label for="dob" style="color:rgb(143, 218, 218)">phone</label>
+                        <input type="number" class="form-control form-rounded " id="phone" required
+                            [(ngModel)]="register.phone" name="phone" />
+                    </div>
+
+                    <div class="form-floating">
+                        <label for="password" style="color:rgb(143, 218, 218)">password</label>
+                        <input placeholder="" type="password" class="form-control form-rounded" id="password" required
+                            [(ngModel)]="register.password" name="password" />
+                    </div>
+
+                    <button type="submit" (click)="saveUser()" class="btn btn-danger" id="su">
+                        SignUp
+                    </button>
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer d-flex justify-content-center ">
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+            <div *ngIf="submitted" data-bs-dismiss="modal"></div>
+
         </div>
-    </nav>
-    <!-- Masthead-->
-    <header class="masthead">
-        <div class="container">
-            <div class="masthead-subheading">Welcome To Our Studio!</div>
-            <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-            <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
-        </div>
-    </header>
-    <!-- Services-->
-   
+    </div>
+</div>
