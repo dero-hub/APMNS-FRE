@@ -1,0 +1,26 @@
+.forgo{
+    text-align: right;
+}
+.col-sm-6{
+    padding-left: 0%;
+}
+.forg{
+    text-align: left;
+    padding-bottom: 2%;
+}
+.heading{
+    text-align: center;
+    font-size: x-large;
+}
+.bt{ 
+    padding-top: 4%;
+    text-align: center;
+    line-height: 80%;
+}
+.btn-primary{
+    padding-left: 45%;
+    padding-right: 50%;
+}
+.spany{
+    color: rgb(12, 12, 235);
+}

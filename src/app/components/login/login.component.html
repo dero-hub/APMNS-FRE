@@ -2,55 +2,42 @@
 
     <div class="row flex-fill">
         <div class="col-sm-6">
-            <img src="../../../assets/t4.jpg" class="img-fluid" alt="Responsive image">
+            <img src="../../../assets/logo1.jpeg" class="img-fluid" alt="Responsive image">
         </div>
 
         <div class="col-sm-6 h-100" style="background: white">
             <div style="padding-top: 2.5%">
             </div>
             <div class="submit-form" style="padding-top: 5.5%">
-
-                < <div class="card">
-
-                    <hr>
-                    <div class="card-body">
-                        <div *ngIf="!submitted">
-                            <div class="card-header" style="
-                        background: white;
-                        color: #a0474e;
-                        text-align: center;
-                        font-size: 45px;
-                        font-family: 'PT Mono', monospace;
-                      ">
-                                <strong>Login Form</strong>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone" style="color: rgb(248, 9, 9)">Username:</label>
-                                <input placeholder="" type="text" class="form-control" id="username" required
-                                    [(ngModel)]="user.username" name="username" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="password" style="color: rgb(248, 9, 9)">Password:</label>
-                                <input placeholder="" type="password" class="form-control" id="password" required
-                                    [(ngModel)]="user.password" name="password" />
-                            </div>
-
-                            <button (click)="saveUser();" class="btn btn-primary">Login</button>
-                        </div>
-
-                        <div style="color: rgb(248, 9, 9); cursor: pointer; padding-top: 1%;">
-                            Don't have an account? click here to Register
-                            <div class="float-right" style="color: rgb(218, 11, 21); cursor: pointer; padding: 0%;">
-                                Forgot password?
-                            </div>
-                        </div>
-
+                <form style="font-size:14px;">
+                    <div *ngIf="!submitted" class="heading" style="color: blue">
+                        <strong>Login</strong>
                     </div>
+
+                    <div class="form-floating mt-2 mb-2">
+                        <input type="text" class="form-control" id="phone" placeholder="Enter Mobile Number"
+                            name="phone" [(ngModel)]="user.phone" required>
+                        <label for="phone" style="color: rgb(18, 19, 19)"> Mobile Number </label>
+                    </div>
+                    <div class="form-floating mt-2 mb-2">
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter Password"
+                            name="password" [(ngModel)]="user.password" required>
+                        <label for="pwd" style="color: rgb(18, 19, 19)"> Password </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                        <label class="form-check-label" style="color:grey">I have read and accepted the <span class="spany">Terms & Conditions</span></label>
+                      </div>
+                      <div class="bt">
+                        <button (click)="saveUser();" class="btn btn-primary">Login</button>
+                      </div>                    
+                    <div class="forgo" style="color: rgb(9, 13, 248); padding-top: 2%;">
+                        Don't have an account? click here to Register
+                        <p class="forg"> Forgot password?</p>
+                    </div>
+                </form>
             </div>
 
         </div>
     </div>
-</div>
-</div>
