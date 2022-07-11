@@ -4,6 +4,9 @@
 .col-sm-6{
     padding-left: 0%;
 }
+.form{
+    padding-top: 10%;
+}
 .forg{
     text-align: left;
     padding-bottom: 2%;
@@ -11,6 +14,7 @@
 .heading{
     text-align: center;
     font-size: x-large;
+    padding-bottom: 5%;
 }
 .bt{ 
     padding-top: 4%;
